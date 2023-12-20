@@ -1,5 +1,7 @@
 package org.example
 
+import org.example.Solutions.FizzBuzz
+
 fun main() {
     println("Enter selection: ")
     val stringInput = readlnOrNull()
@@ -12,7 +14,8 @@ fun main() {
 private fun optionProcessor(selection: Int) {
     when(selection) {
         1 -> {
-            println("Selected : Fizz-Buzz : $selection")
+            println("Selected : Fizz-Buzz : $selection \n\n")
+            FizzBuzz().fizzBuzz()
         }
     }
 }
