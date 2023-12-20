@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.Solutions.FizzBuzz
+import org.example.Solutions.findKthLargest
 import org.example.Solutions.leftShift
 import org.example.Solutions.reverseSentence
 
@@ -32,6 +33,13 @@ private fun optionProcessor(selection: Int) {
             for(element in rotatedArray){
                 println(element)
             }
+        }
+
+        4 -> {
+            println("Selected : Array Rotation : $selection \n\n")
+            println(
+                intArrayOf(2,3,1,4,5).findKthLargest(2)
+            )
         }
     }
 }
