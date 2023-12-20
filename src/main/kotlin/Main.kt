@@ -1,7 +1,8 @@
 package org.example
 
 import org.example.Solutions.FizzBuzz
-import org.example.Solutions.ReverseWord
+import org.example.Solutions.leftShift
+import org.example.Solutions.reverseSentence
 
 fun main() {
     println("Enter selection: ")
@@ -13,14 +14,24 @@ fun main() {
 }
 
 private fun optionProcessor(selection: Int) {
-    when(selection) {
+    when (selection) {
         1 -> {
             println("Selected : Fizz-Buzz : $selection \n\n")
             FizzBuzz().fizzBuzz()
         }
+
         2 -> {
             println("Selected : Reverse Word : $selection \n\n")
-            ReverseWord().reverseWord("string to be reversed")
+            println(("string to be reversed").reverseSentence())
+        }
+
+        3 -> {
+            println("Selected : Array Rotation : $selection \n\n")
+            val rotatedArray = intArrayOf(1, 2, 3, 4, 5, 6, 7).leftShift(2)
+
+            for(element in rotatedArray){
+                println(element)
+            }
         }
     }
 }
