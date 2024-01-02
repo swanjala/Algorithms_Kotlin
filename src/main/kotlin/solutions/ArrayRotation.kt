@@ -1,4 +1,4 @@
-package org.example.Solutions
+package org.example.solutions
 
 /*
 * Given an array, rotate the array to the left by k steps,

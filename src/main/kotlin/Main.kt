@@ -1,9 +1,10 @@
 package org.example
 
-import org.example.Solutions.FizzBuzz
-import org.example.Solutions.findKthLargest
-import org.example.Solutions.leftShift
-import org.example.Solutions.reverseSentence
+import org.example.Solutions.*
+import org.example.solutions.findKthLargest
+import org.example.solutions.leftShift
+import org.example.solutions.reverseSentence
+import org.example.solutions.setMatrixZero
 
 fun main() {
     println("Enter selection: ")
@@ -40,6 +41,21 @@ private fun optionProcessor(selection: Int) {
             println(
                 intArrayOf(2,3,1,4,5).findKthLargest(2)
             )
+        }
+
+        5 -> {
+            println("Selected : Set Matrix Zero : $selection \n\n")
+
+            val inputArray = arrayOf(
+                intArrayOf(1,1,1),
+                intArrayOf(1,0,1),
+                intArrayOf(1,1,1),
+            )
+           inputArray.setMatrixZero()
+
+            println(inputArray.map { it ->
+                it.toList()
+            })
         }
     }
 }

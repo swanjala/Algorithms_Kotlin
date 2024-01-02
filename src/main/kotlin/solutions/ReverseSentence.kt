@@ -1,4 +1,4 @@
-package org.example.Solutions
+package org.example.solutions
 
 /*
 * Given an input string, reverse the string word for word
