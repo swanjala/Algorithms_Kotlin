@@ -1,6 +1,6 @@
 package org.example.solutions
 
-import java.util.*
+import java.util.Arrays
 
 
 /*
