@@ -1,6 +1,13 @@
 package org.example
 
-import org.example.solutions.*
+import org.example.solutions.FizzBuzz
+import org.example.solutions.reverseSentence
+import org.example.solutions.leftShift
+import org.example.solutions.findKthLargest
+import org.example.solutions.spiralMatrix
+import org.example.solutions.setMatrixZero
+
+
 
 
 fun main() {
