@@ -1,13 +1,13 @@
 package org.example
 
-import org.example.solutions.FizzBuzz
-import org.example.solutions.reverseSentence
-import org.example.solutions.leftShift
 import org.example.solutions.findKthLargest
+import org.example.solutions.reverseSentence
+import org.example.solutions.FizzBuzz
+import org.example.solutions.leftShift
 import org.example.solutions.spiralMatrix
 import org.example.solutions.setMatrixZero
-
-
+import java.util.LinkedList
+import java.util.Queue
 
 
 fun main() {
@@ -72,7 +72,33 @@ private fun optionProcessor(selection: Int) {
                 intArrayOf(7, 8, 9),
             ).spiralMatrix()
 
-            println(inputArray)
+            println(inputArray.toString())
+
+        }
+
+        7 -> {
+            println("Selected : Queue with linkedList : $selection \n\n")
+            val queue: Queue<String> = LinkedList<String>()
+
+            queue.add("Apple")
+            queue.add("Orange")
+            queue.add("Banana")
+            queue.add("Peaches")
+
+            println(queue)
+            println(queue.isEmpty())
+            println(queue.size)
+
+            val apple = "Apple"
+            if (queue.contains(apple)) {
+                println("Queue $queue contains $apple")
+            } else {
+                println("Queue doesn't contain $apple")
+            }
+
+            val firstElement1 = queue.peek()
+
+            println("First: $firstElement1")
 
         }
 
