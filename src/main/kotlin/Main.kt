@@ -1,10 +1,7 @@
 package org.example
 
-import org.example.Solutions.*
-import org.example.solutions.findKthLargest
-import org.example.solutions.leftShift
-import org.example.solutions.reverseSentence
-import org.example.solutions.setMatrixZero
+import org.example.solutions.*
+
 
 fun main() {
     println("Enter selection: ")
@@ -31,15 +28,15 @@ private fun optionProcessor(selection: Int) {
             println("Selected : Array Rotation : $selection \n\n")
             val rotatedArray = intArrayOf(1, 2, 3, 4, 5, 6, 7).leftShift(2)
 
-            for(element in rotatedArray){
-                println(element)
+            for (element in rotatedArray) {
+                println(element.toString())
             }
         }
 
         4 -> {
             println("Selected : Array Rotation : $selection \n\n")
-            println(
-                intArrayOf(2,3,1,4,5).findKthLargest(2)
+            print(
+                intArrayOf(2, 3, 1, 4, 5).findKthLargest(2)
             )
         }
 
@@ -47,15 +44,33 @@ private fun optionProcessor(selection: Int) {
             println("Selected : Set Matrix Zero : $selection \n\n")
 
             val inputArray = arrayOf(
-                intArrayOf(1,1,1),
-                intArrayOf(1,0,1),
-                intArrayOf(1,1,1),
+                intArrayOf(1, 1, 1),
+                intArrayOf(1, 0, 1),
+                intArrayOf(1, 1, 1),
             )
-           inputArray.setMatrixZero()
+            inputArray.setMatrixZero()
 
             println(inputArray.map { it ->
                 it.toList()
             })
+        }
+
+        6 -> {
+            println("Selected : Spiral Matrix : $selection \n\n")
+
+
+            val inputArray = arrayOf(
+                intArrayOf(1, 2, 3),
+                intArrayOf(4, 5, 6),
+                intArrayOf(7, 8, 9),
+            ).spiralMatrix()
+
+            println(inputArray)
+
+        }
+
+        else -> {
+            println("Select only 1 to 6")
         }
     }
 }
